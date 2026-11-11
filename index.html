@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vocabulary for Speaking – Shirin Ishbekova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#FFF6F9; --line:#F7DDE7; --margin:#F0A9C3;
+  --ink:#8A1F4F; --pen:#D13A78; --soft:#FCE5EE; --sheet:#FFFFFF;
+  --text:#3A1F2B; --muted:#7D5A69; --hi:#FFC9DD; --red:#8E7882;
+  --hand:"Kalam","Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+  --body:"Atkinson Hyperlegible",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#26101C; --line:#371A2A; --margin:#6E2E50;
+    --ink:#FFC9DE; --pen:#FF8DB8; --soft:#3B1B2E; --sheet:#311626;
+    --text:#F7E6EE; --muted:#C9A5B5; --hi:rgba(255,120,170,.35); --red:#B39AA6;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#26101C; --line:#371A2A; --margin:#6E2E50;
+  --ink:#FFC9DE; --pen:#FF8DB8; --soft:#3B1B2E; --sheet:#311626;
+  --text:#F7E6EE; --muted:#C9A5B5; --hi:rgba(255,120,170,.35); --red:#B39AA6;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background-color:var(--paper);color:var(--text);
+  font-family:var(--body);font-size:17px;line-height:1.6;
+  background-image:repeating-linear-gradient(to bottom,transparent 0 31px,var(--line) 31px 32px);
+}
+body::after{content:"";position:fixed;top:0;bottom:0;left:22px;width:2px;background:var(--margin);opacity:.7;pointer-events:none}
+@media (min-width:760px){body::after{left:56px}}
+main,footer{max-width:780px;margin:0 auto;padding:0 20px 0 42px}
+@media (min-width:760px){main,footer{padding:0 32px 0 88px}}
+h1,h2,h3,.hand{font-family:var(--hand);color:var(--ink);font-weight:700;line-height:1.15}
+a{color:var(--pen)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--pen);outline-offset:2px;border-radius:4px}
+
+/* hero */
+.hero{padding:56px 0 28px}
+.hero h1{font-size:clamp(2.6rem,9vw,4.4rem);margin:0;transform:rotate(-1.2deg);transform-origin:left}
+.squiggle{display:block;width:min(320px,70%);height:18px;margin:4px 0 22px;color:var(--pen)}
+.hero p.lead{font-size:1.15rem;max-width:58ch;margin:0 0 22px}
+.sig{font-family:var(--hand);font-size:1.5rem;color:var(--pen);margin:0;line-height:1.2}
+.sig small{display:block;font-family:var(--body);font-size:.95rem;color:var(--muted)}
+
+/* how it helps */
+.note{background:var(--sheet);border:1.5px solid var(--pen);border-radius:14px 18px 12px 20px;padding:22px 22px 18px;margin:18px 0 40px;transform:rotate(.4deg)}
+.note h2{font-size:1.9rem;margin:0 0 10px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:10px;margin:0 0 12px}
+.steps li::before{content:counter(s);font-family:var(--hand);font-weight:700;font-size:1.3rem;color:var(--pen);width:34px;height:34px;display:grid;place-items:center;border:2px solid var(--pen);border-radius:50% 45% 52% 48%}
+.steps b{color:var(--ink)}
+.note .tip{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+
+/* contents */
+.contents h2{font-size:2rem;margin:0 0 4px}
+.contents .count{margin:0 0 14px;color:var(--muted)}
+.ulist{list-style:none;margin:0 0 40px;padding:0}
+.ulist button{width:100%;text-align:left;background:none;border:0;border-bottom:1.5px dashed var(--margin);padding:10px 4px;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:10px;cursor:pointer}
+.ulist .num{font-family:var(--hand);font-weight:700;color:var(--pen);font-size:1.15rem;width:40px;height:40px;display:grid;place-items:center;border:2px solid var(--pen);border-radius:52% 46% 50% 44%}
+.ulist .t{font-family:var(--hand);font-size:1.3rem;color:var(--ink);line-height:1.2}
+.ulist .s{display:block;font-family:var(--body);font-size:.88rem;color:var(--muted)}
+.ulist .done{font-family:var(--hand);color:var(--pen);font-size:1.4rem;min-width:24px}
+.ulist button[aria-current="true"] .t{background:linear-gradient(transparent 55%,var(--hi) 55%)}
+.ulist button:hover .t{text-decoration:underline;text-decoration-color:var(--margin)}
+
+/* unit */
+.unit{padding-bottom:30px}
+.unit-head .no{font-family:var(--hand);color:var(--pen);font-size:1.3rem;margin:0}
+.unit-head h2{font-size:clamp(2.2rem,7vw,3.2rem);margin:0 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.tag{border:1.5px solid var(--pen);color:var(--pen);border-radius:999px;padding:2px 12px;font-size:.88rem;background:var(--sheet)}
+.unit-head .topic{color:var(--muted);margin:6px 0 0}
+.step{margin:42px 0 0}
+.step-h{display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.step-h .c{font-family:var(--hand);font-weight:700;color:var(--sheet);background:var(--pen);width:36px;height:36px;display:grid;place-items:center;border-radius:50% 46% 52% 47%;flex:none;font-size:1.2rem}
+.step-h h3{font-size:1.75rem;margin:0}
+.row-tools{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}
+.btn{background:var(--sheet);border:1.5px solid var(--pen);color:var(--pen);border-radius:10px;padding:7px 14px;cursor:pointer;font-weight:700;font-size:.95rem}
+.btn:hover{background:var(--soft)}
+.btn.solid{background:var(--pen);color:var(--sheet)}
+.btn.solid:hover{filter:brightness(1.08)}
+
+.words{list-style:none;margin:0;padding:0;display:grid;gap:0 28px}
+@media (min-width:700px){.words{grid-template-columns:1fr 1fr}}
+.words li{border-bottom:1.5px dashed var(--margin);padding:12px 0 10px}
+.w-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.w{font-family:var(--hand);font-weight:700;color:var(--ink);font-size:1.45rem;line-height:1.2}
+.pos{font-size:.82rem;color:var(--muted);font-style:italic}
+.say{margin-left:auto;background:none;border:0;color:var(--pen);cursor:pointer;padding:2px 4px;border-radius:6px;display:inline-flex}
+.say svg{width:20px;height:20px}
+.m{margin:2px 0 4px}
+.e{margin:0;color:var(--muted);font-style:italic;font-size:.95rem}
+.hide-m .m{filter:blur(6px);user-select:none;cursor:pointer}
+.hide-m .m.peek{filter:none}
+
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:20px 22px;box-shadow:0 2px 0 var(--line)}
+.sheet h4{font-family:var(--hand);color:var(--ink);font-size:1.45rem;margin:0 0 8px}
+.sheet p{margin:0 0 10px;max-width:68ch}
+.dialog p{margin:0 0 6px}
+.dialog b{color:var(--ink)}
+.hl{background:linear-gradient(transparent 52%,var(--hi) 52%);border:0;padding:0 1px;cursor:pointer;color:inherit;font:inherit;font-weight:700}
+.gloss{margin:14px 0 0;padding:10px 14px;border-left:3px solid var(--pen);background:var(--soft);border-radius:0 8px 8px 0;font-size:.95rem}
+.gloss strong{font-family:var(--hand);color:var(--ink);font-size:1.15rem}
+
+.q{border:2px solid var(--pen);border-radius:16px 12px 18px 14px;padding:16px 18px;background:var(--sheet);margin:0 0 16px}
+.q .lab{font-family:var(--hand);color:var(--pen);font-size:1.15rem;margin:0}
+.q p.qt{margin:4px 0 0;font-weight:700}
+.model .sheet{margin-top:8px}
+.starters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0;padding:0;list-style:none}
+.starters li{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:.95rem}
+.sub{font-family:var(--hand);color:var(--ink);font-size:1.35rem;margin:22px 0 4px}
+.turn{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:8px 0 0}
+.clock{font-family:var(--hand);font-size:2rem;color:var(--ink);min-width:80px}
+.more{margin:8px 0 0;padding-left:20px}
+.more li{margin:0 0 4px}
+
+.mist{list-style:none;margin:0;padding:0}
+.mist li{display:grid;grid-template-columns:1fr;gap:2px;padding:8px 0;border-bottom:1.5px dashed var(--margin)}
+@media (min-width:640px){.mist li{grid-template-columns:1fr 1fr;gap:16px}}
+.bad{color:var(--red);text-decoration:line-through;text-decoration-thickness:2px}
+.good{color:var(--pen);font-weight:700}
+.bad::before{content:"✗ ";text-decoration:none;display:inline-block}
+.good::before{content:"✓ "}
+
+.quiz{list-style:none;margin:0;padding:0}
+.quiz li{padding:10px 0 12px;border-bottom:1.5px dashed var(--margin)}
+.quiz .s{margin:0 0 8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:var(--sheet);border:1.5px solid var(--margin);border-radius:10px;padding:6px 14px;cursor:pointer}
+.opt:hover{border-color:var(--pen)}
+.opt.right{border-color:var(--pen);background:var(--soft);color:var(--pen);font-weight:700}
+.opt.wrong{border-color:var(--red);color:var(--red);text-decoration:line-through}
+.fb{margin:6px 0 0;font-size:.92rem;color:var(--muted);min-height:1.2em}
+.score{font-family:var(--hand);font-size:1.3rem;color:var(--ink);margin:12px 0 0}
+
+.unit-end{display:flex;flex-wrap:wrap;gap:12px;margin:36px 0 0;align-items:center}
+.unit-end a{margin-left:auto;font-size:.95rem}
+
+footer{padding-top:30px;padding-bottom:50px;border-top:1.5px dashed var(--margin);margin-top:30px}
+footer .sig{font-size:1.6rem}
+footer p{margin:6px 0;max-width:62ch}
+footer .small{font-size:.85rem;color:var(--muted)}
+.tg{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;border:1.5px solid var(--pen);padding:6px 14px;border-radius:999px;margin:8px 0}
+.tg:hover{background:var(--soft)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>Vocabulary for Speaking</h1>
+    <svg class="squiggle" viewBox="0 0 320 18" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12 C 40 2, 70 16, 110 8 S 180 2, 220 10 S 290 14, 318 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    <p class="lead">Ten units from <i>English Vocabulary in Use</i> (Pre-intermediate &amp; Intermediate), chosen for the CEFR Multilevel and IELTS speaking tests. Learn each word, see it in a real text, then say it in an exam answer.</p>
+    <p class="sig">with Shirin Ishbekova<small>English teacher, CEFR Multilevel &amp; IELTS preparation</small></p>
+  </header>
+
+  <section class="note" aria-labelledby="how">
+    <h2 id="how">How this site helps you</h2>
+    <ol class="steps">
+      <li><span><b>Learn the word.</b> A simple meaning and an example sentence. Say each word out loud. Hide the meanings to test yourself.</span></li>
+      <li><span><b>Read it in context.</b> A short text with the new words highlighted. Tap any highlighted word to check its meaning.</span></li>
+      <li><span><b>Use it in speaking.</b> A real exam-style question, a model answer that uses the words, sentence starters, and a timer so you can answer out loud.</span></li>
+      <li><span><b>Check yourself.</b> Common mistakes to avoid and a three-question quiz. Then mark the unit as done.</span></li>
+    </ol>
+    <p class="tip">Study one unit a day and you will finish in ten days. Always say the model answer out loud at least once.</p>
+  </section>
+
+  <section class="contents" id="contents" aria-labelledby="ch">
+    <h2 id="ch">Choose a unit</h2>
+    <p class="count" id="count"></p>
+    <ul class="ulist" id="ulist"></ul>
+  </section>
+
+  <article class="unit" id="unit" aria-live="polite"></article>
+</main>
+
+<footer>
+  <p class="sig">Shirin Ishbekova</p>
+  <p>English teacher preparing students for the CEFR Multilevel exam and IELTS. Questions, lessons and more materials on Telegram:</p>
+  <a class="tg" href="https://t.me/cefrwithshirin" target="_blank" rel="noopener">✈ @cefrwithshirin</a>
+  <p class="small">Unit numbers follow <i>English Vocabulary in Use: Pre-intermediate and Intermediate</i> (Cambridge University Press). The texts, questions and model answers here are original practice material. Use this site together with the book.</p>
+</footer>
+
+<script>
+
+var UNITS=[
+{n:11,title:"Describing character",topic:"People you know and admire",cefr:"CEFR Part 1.1, Part 2",ielts:"IELTS Part 2",time:120,
+words:[
+{w:"reliable",p:"adj",m:"you can trust them to do what they promise",e:"My brother is very reliable – if he says he’ll help, he always does."},
+{w:"confident",p:"adj",m:"sure about yourself and what you can do",e:"She’s confident when she speaks in front of the class."},
+{w:"shy",p:"adj",m:"nervous about meeting or talking to new people",e:"I was quite shy as a child, but I’m more open now."},
+{w:"hard-working",p:"adj",m:"puts a lot of effort and time into work",e:"My mother is the most hard-working person I know."},
+{w:"a good sense of humour",p:"phrase",m:"able to laugh at things and make other people laugh",e:"My best friend has a great sense of humour, so we laugh a lot."},
+{w:"patient",p:"adj",m:"stays calm and doesn’t get angry when things take time",e:"Teachers need to be patient with young learners."},
+{w:"generous",p:"adj",m:"happy to give money, time or help",e:"My uncle is generous – he helps everyone in our neighbourhood."},
+{w:"honest",p:"adj",m:"tells the truth",e:"I like honest people, even when the truth is hard to hear."},
+{w:"sensible",p:"adj",m:"practical; doesn’t do silly things",e:"She’s very sensible with money."},
+{w:"creative",p:"adj",m:"good at thinking of new ideas and using imagination",e:"He’s creative – he designs his own clothes."}],
+reading:{title:"The person I trust most",text:"When people ask me who I admire, I always think of my older sister, Malika. She is a nurse, and she is incredibly [[hard-working|3]]: she often finishes her shift late and still helps our parents at home. She is also very [[reliable|0]]. If she promises to call you, she calls. As a teenager she was quite [[shy|2]], but working in a hospital made her more [[confident|1]], and now she talks to strangers easily. What I love most is her [[sense of humour|4]]. Even on a bad day she can make the whole family laugh. She is [[patient|5]] with our grandmother, [[generous|6]] with her time, and always [[honest|7]] with me, even when I don’t want to hear the truth. People say I’m the [[creative|9]] one in the family, but she is the [[sensible|8]] one – and I think every family needs both."},
+speak:{label:"IELTS Part 2 / CEFR Part 2",q:"Describe a person you admire. You should say: who this person is, how you know them, what they are like, and explain why you admire them.",
+sample:"I’d like to talk about my football coach, Mr Karimov. I’ve known him for about five years. The first thing I’d say about him is that he’s extremely [[reliable|0]] – he has never missed a training session. He’s also really [[patient|5]]. When I was younger, I was quite [[shy|2]], and he helped me become more [[confident|1]] by giving me small responsibilities in the team. On top of that, he has a great [[sense of humour|4]], so training is never boring. I admire him because he’s [[generous|6]] with his time and [[honest|7]] with us, even when we play badly.",
+starters:["The first thing I’d say about him/her is that…","What I really admire is that…","He/She can be a bit…, but overall…","I’ve never known him/her to…"],
+more:["CEFR Part 1.1: What kind of people do you like to spend time with?","IELTS Part 1: Are you more like your mother or your father?","IELTS Part 3: Which is more important for a leader: being honest or being confident?"]},
+mistakes:[["How is your friend like?","What is your friend like?"],["He is like very kind.","He is very kind."],["She has a good humour.","She has a good sense of humour."]],
+quiz:[["You can always count on Aziz. He’s very ___.",["reliable","shy","creative"],0],["I get nervous when I meet new people – I’m a bit ___.",["honest","shy","generous"],1],["She gives so much of her time to help others. She’s really ___.",["sensible","generous","patient"],1]]},
+
+{n:12,title:"Feelings",topic:"Emotions, experiences and memories",cefr:"CEFR Part 1.2, Part 2",ielts:"IELTS Part 2",time:120,
+words:[
+{w:"proud (of)",p:"adj",m:"feeling good because you or someone close did something well",e:"I was really proud of myself when I passed the exam."},
+{w:"disappointed",p:"adj",m:"unhappy because something wasn’t as good as you hoped",e:"I was disappointed with my first speaking score."},
+{w:"confused",p:"adj",m:"not able to think clearly or understand something",e:"I felt confused because the instructions weren’t clear."},
+{w:"hopeful",p:"adj",m:"feeling positive about the future",e:"I’m hopeful that I’ll get a B2 this time."},
+{w:"curious",p:"adj",m:"wanting to know or learn about something",e:"Children are curious about everything."},
+{w:"anxious",p:"adj",m:"worried",e:"I always feel anxious before an exam."},
+{w:"upset",p:"adj",m:"unhappy because something unpleasant has happened",e:"She was upset when her friend forgot her birthday."},
+{w:"cheerful",p:"adj",m:"happy and positive",e:"Sunny mornings make me feel cheerful."},
+{w:"in a good / bad mood",p:"phrase",m:"the way you feel at a particular time",e:"I’m in a bad mood when I don’t sleep enough."},
+{w:"stressed / stressful",p:"adj",m:"stressed = how a person feels; stressful = a situation that causes worry",e:"Exam week is stressful, so I feel stressed."}],
+reading:{title:"Exam day: a diary entry",text:"Monday, 8 a.m. I woke up feeling [[anxious|5]]. Today was my CEFR speaking exam, and the whole week had been really [[stressful|9]]. My mum, always [[cheerful|7]], made my favourite breakfast and said, ‘Whatever happens, I’m [[proud|0]] of you.’ That put me in a much better [[mood|8]]. In the exam, the first question left me a little [[confused|2]], so I asked the examiner to repeat it – which is completely fine. After that, I relaxed and even felt [[curious|4]] about the pictures in Part 2. I was a bit [[disappointed|1]] with my Part 3 answer, because I forgot a good example. But I wasn’t [[upset|6]] for long. Now I’m [[hopeful|3]] about my result."},
+speak:{label:"IELTS Part 2 / CEFR Part 2",q:"Describe a time when you felt proud of yourself. You should say: when it was, what you did, who was with you, and explain why you felt proud.",
+sample:"I’d like to describe the day I gave my first presentation in English at university. Before it, I was so [[anxious|5]] that I couldn’t eat breakfast, and I was in a terrible [[mood|8]]. But once I started speaking, I felt much calmer. At one point a classmate asked a question that left me a bit [[confused|2]], but I managed to answer it. When I finished, everyone clapped and my teacher said it was excellent. I felt really [[proud|0]] of myself, because a year earlier I had been too nervous to speak in class at all. It made me feel [[hopeful|3]] about my future.",
+starters:["I felt really … when…","At first I was …, but then…","It made me feel…","What made me … was that…"],
+more:["CEFR Part 1.2: Look at two pictures of people. How do you think they feel?","IELTS Part 1: What do you do when you feel stressed?","IELTS Part 3: Why do some people find it hard to talk about their feelings?"]},
+mistakes:[["I was very boring in the lesson.","I was very bored in the lesson."],["I am stressing about the exam.","I am stressed about the exam."],["I’m proud on my son.","I’m proud of my son."]],
+quiz:[["My result wasn’t as good as I hoped. I’m ___.",["disappointed","curious","cheerful"],0],["I didn’t understand the question, so I was ___.",["proud","confused","hopeful"],1],["Moving to a new country can be very ___.",["stressed","anxious","stressful"],2]]},
+
+{n:26,title:"City life",topic:"Your hometown, cities and the countryside",cefr:"CEFR Part 1.1, Part 3",ielts:"IELTS Part 1, Part 3",time:120,
+words:[
+{w:"rush hour",p:"noun",m:"the busy time when people travel to and from work",e:"Never take a taxi in the rush hour."},
+{w:"traffic jam",p:"noun",m:"a long line of cars that aren’t moving",e:"There’s a traffic jam on the main road every morning."},
+{w:"get stuck (in traffic)",p:"phrase",m:"be unable to move",e:"I got stuck in traffic and was late for class."},
+{w:"crowded",p:"adj",m:"full of people",e:"The metro is always crowded at 8 a.m."},
+{w:"pollution",p:"noun",m:"dirty air, water or land",e:"Air pollution is a serious problem in big cities."},
+{w:"lively",p:"adj",m:"full of activity and energy",e:"The city centre is really lively in the evenings."},
+{w:"nightlife",p:"noun",m:"places to go in the evening: cafés, cinemas, theatres, concerts",e:"The nightlife here is great in summer."},
+{w:"a wide variety of",p:"phrase",m:"many different kinds of",e:"There’s a wide variety of restaurants near my flat."},
+{w:"good value for money",p:"phrase",m:"worth the price you pay",e:"Flats in small towns are often better value for money."},
+{w:"dull",p:"adj",m:"boring",e:"Life in the city is never dull."},
+{w:"advantages / disadvantages",p:"noun",m:"the good sides / the bad sides of something",e:"One of the main advantages of city life is the choice of jobs."}],
+reading:{title:"Two sides of the city",text:"I moved to the capital two years ago to study, and I still have mixed feelings about it. On the one hand, it is a [[lively|5]] place with [[a wide variety of|7]] cafés, museums and parks, and the [[nightlife|6]] is fantastic, especially in summer. Life here is never [[dull|9]]. On the other hand, getting around is hard work. In the [[rush hour|0]], buses are so [[crowded|3]] that you can hardly breathe, and if you take a taxi, you usually [[get stuck|2]] in a [[traffic jam|1]]. [[Pollution|4]] is another problem, particularly in winter. Rents are high too, so flats aren’t always [[good value for money|8]]. Still, for a young person, I think the [[advantages|10]] are bigger than the disadvantages."},
+speak:{label:"CEFR Part 3 / IELTS Part 3",q:"Living in a big city is better than living in a small town. Talk about both sides of this statement, then give your own opinion.",
+sample:"Many people believe that cities offer more opportunities. For one thing, there is [[a wide variety of|7]] jobs, universities and entertainment, and the [[nightlife|6]] is much more [[lively|5]]. Life there is rarely [[dull|9]]. However, there are clear [[disadvantages|10]] too. Cities are [[crowded|3]], [[pollution|4]] is often worse, and people waste hours when they [[get stuck|2]] in [[traffic jams|1]] during the [[rush hour|0]]. A small town, in contrast, is quieter and usually [[better value for money|8]]. Personally, I’d choose the city while I’m young, but I’d prefer a quieter place when I have a family.",
+starters:["One of the main advantages of … is that…","On the other hand, …","Another drawback is that…","Overall, I’d say that…"],
+more:["IELTS Part 1: Do you live in a city or in the countryside?","CEFR Part 1.1: What do you like most about your hometown?","IELTS Part 3: How could cities reduce traffic problems?"]},
+mistakes:[["I couldn’t find a parking.","I couldn’t find a parking space."],["The traffic was very stressing.","The traffic was very stressful."],["There are a lot of traffic.","There is a lot of traffic."]],
+quiz:[["There are so many people on the bus – it’s really ___.",["crowded","dull","lively"],0],["I was late because I got ___ in a traffic jam.",["lost","stuck","crowded"],1],["This flat is big and cheap – it’s good ___ for money.",["price","cost","value"],2]]},
+
+{n:33,title:"Studying English and taking exams",topic:"Learning languages and exams",cefr:"CEFR Part 1.1",ielts:"IELTS Part 1",time:30,
+words:[
+{w:"fluent",p:"adj",m:"able to speak easily, without stopping a lot",e:"I want to become fluent in English."},
+{w:"accurately",p:"adv",m:"without mistakes",e:"She speaks quickly but not always accurately."},
+{w:"a wide vocabulary",p:"phrase",m:"knowing a lot of words",e:"Reading helps you build a wide vocabulary."},
+{w:"accent",p:"noun",m:"the way you pronounce words",e:"Don’t worry about your accent – being clear is enough."},
+{w:"make yourself understood",p:"phrase",m:"say things in a way people can understand",e:"My English is basic, but I can make myself understood."},
+{w:"pick (something) up",p:"phrasal verb",m:"learn something easily, without much study",e:"Children pick up languages very quickly."},
+{w:"make progress",p:"phrase",m:"get better step by step",e:"I’m making a lot of progress with my writing."},
+{w:"revise (for)",p:"verb",m:"study again before an exam",e:"I revise for two hours every evening."},
+{w:"pass / fail",p:"verb",m:"be successful / not successful in an exam",e:"She passed the exam with a B2."},
+{w:"do your best",p:"phrase",m:"try as hard as you can",e:"Just do your best in the exam."}],
+reading:{title:"Notes from a teacher",text:"Every term I write short notes about my students. Dilnoza is already quite [[fluent|0]]: she hardly ever stops to think. Now she needs to speak more [[accurately|1]], especially with past tenses. Bekzod has a [[wide vocabulary|2]] because he reads a lot, but his [[accent|3]] sometimes makes words unclear, so we practise sounds together. Zarina is an elementary learner, but she can always [[make herself understood|4]], which is a great skill. She also [[picks up|5]] new phrases from films very quickly. All of them are [[making progress|6]]. Next month they will take the Multilevel exam. They are [[revising|7]] hard, and I believe they will all [[pass|8]] if they [[do their best|9]]."},
+speak:{label:"IELTS Part 1 / CEFR Part 1.1",q:"How long have you been learning English, and what do you find most difficult about it?",
+sample:"I’ve been learning English for about four years now, mostly at a learning centre and online. I’d say the most difficult thing for me is speaking [[accurately|1]]. I can be quite [[fluent|0]] when I’m relaxed, but I still make mistakes with tenses. My [[vocabulary|2]] is growing, because I watch series with English subtitles and I [[pick up|5]] a lot of useful phrases that way. I think I’m [[making progress|6]] step by step, and I hope to [[pass|8]] my CEFR exam with a B2 this year.",
+starters:["I’ve been learning English for…","The most difficult thing for me is…","What helps me most is…","I’m hoping to…"],
+more:["CEFR Part 1.1: Why is English important for young people in your country?","IELTS Part 1: Did you enjoy learning languages at school?","IELTS Part 3: Is it better to learn a language at home or abroad?"]},
+mistakes:[["I will make the exam in June.","I will take the exam in June."],["I want to speak English good.","I want to speak English well."],["He is a fluently speaker.","He is a fluent speaker."]],
+quiz:[["I need to study again before the test. I’m going to ___ tonight.",["revise","pass","pick up"],0],["She speaks easily, without stopping. She’s very ___.",["accurate","fluent","basic"],1],["I didn’t study these words – I just ___ them up from songs.",["made","passed","picked"],2]]},
+
+{n:36,title:"Talking about your work",topic:"Work, study and future jobs",cefr:"CEFR Part 1.1",ielts:"IELTS Part 1",time:30,
+words:[
+{w:"What do you do (for a living)?",p:"question",m:"a common way to ask about someone’s job",e:"So, what do you do for a living?"},
+{w:"work for / work in",p:"phrase",m:"work for + a company; work in + an area of work",e:"I work for a bank. I work in marketing."},
+{w:"involve",p:"verb",m:"have something as a necessary part",e:"My job involves a lot of travelling."},
+{w:"be responsible for",p:"phrase",m:"have the duty of doing or looking after something",e:"I’m responsible for training new staff."},
+{w:"be in charge of",p:"phrase",m:"control and manage people or things",e:"She’s in charge of a team of ten."},
+{w:"deal with",p:"phrasal verb",m:"handle; take action about something",e:"I deal with customer complaints."},
+{w:"day-to-day",p:"adj",m:"happening every day; ordinary",e:"I organise the day-to-day work of the office."},
+{w:"salary",p:"noun",m:"money paid every month for a job",e:"Teachers’ salaries have increased recently."},
+{w:"work overtime",p:"phrase",m:"work extra hours",e:"In December we often work overtime."},
+{w:"working conditions",p:"noun",m:"the situation you work in: hours, pay, place",e:"Good working conditions keep staff happy."}],
+reading:{title:"A day in my job",text:"I [[work for|1]] a small travel company in Samarkand, and I [[work in|1]] customer service. My job [[involves|2]] answering emails and phone calls from tourists all over the world. I’m [[responsible for|3]] booking hotels and guides, and I also [[deal with|5]] complaints when something goes wrong. My manager, Laylo, is [[in charge of|4]] the whole office, so she looks after the [[day-to-day|6]] planning. The [[working conditions|9]] are good: the office is bright, and my [[salary|7]] is paid on time every month. The only downside is that in the high season we have to [[work overtime|8]]. When people ask me, ‘[[What do you do|0]]?’, I say I help people fall in love with my country."},
+speak:{label:"IELTS Part 1 / CEFR Part 1.1",q:"Do you work or are you a student? What does your job (or study) involve?",
+sample:"I’m working at the moment. I [[work for|1]] an IT company in Tashkent, and I [[work in|1]] the sales department. My job [[involves|2]] meeting clients and explaining our products. I’m also [[responsible for|3]] writing weekly reports. It’s quite a busy job, and sometimes I have to [[work overtime|8]], but the [[working conditions|9]] are good and my colleagues are friendly. In the future, I’d like to be [[in charge of|4]] my own team.",
+starters:["I work for … / I work in …","My job involves…","I’m responsible for…","The best thing about my job is…"],
+more:["CEFR Part 1.1: What job would you like to do in the future?","IELTS Part 1: Why did you choose this job or subject?","IELTS Part 3: Is salary the most important thing when choosing a job?"]},
+mistakes:[["I have a lot of works.","I have a lot of work."],["My job involves to travel.","My job involves travelling."],["My manager gives me advices.","My manager gives me advice."]],
+quiz:[["She manages ten people. She’s in ___ of the team.",["charge","responsible","involve"],0],["My job ___ a lot of travelling.",["deals","involves","works"],1],["Last month I stayed late every day – I worked a lot of ___.",["salary","conditions","overtime"],2]]},
+
+{n:41,title:"Sport and leisure",topic:"Free time, hobbies and sport",cefr:"CEFR Part 1.1",ielts:"IELTS Part 1",time:30,
+words:[
+{w:"leisure activities",p:"noun",m:"things you do in your free time",e:"My favourite leisure activity is hiking."},
+{w:"play + sport",p:"grammar",m:"use play with ball games and team games",e:"I play football twice a week."},
+{w:"go + -ing",p:"grammar",m:"use go with activities ending in -ing",e:"We go swimming every Saturday."},
+{w:"do a bit of / a lot of",p:"phrase",m:"talk about how much of an activity you do",e:"I do a bit of yoga in the mornings."},
+{w:"keep fit",p:"phrase",m:"stay healthy and strong",e:"Walking to work helps me keep fit."},
+{w:"work out",p:"phrasal verb",m:"do exercise, usually in a gym",e:"I work out three times a week."},
+{w:"for fun",p:"phrase",m:"because you enjoy it",e:"I play chess just for fun."},
+{w:"athlete",p:"noun",m:"a person who is good at sport and trains a lot",e:"Professional athletes train every day."},
+{w:"court / pitch / pool",p:"noun",m:"places for sport: basketball court, football pitch, swimming pool",e:"There’s a new basketball court near my house."},
+{w:"go camping",p:"phrase",m:"stay outside in a tent for a holiday",e:"We go camping in the mountains in summer."}],
+reading:{title:"Weekends in our family",text:"Everyone in my family has different [[leisure activities|0]]. My father [[plays|1]] volleyball with his friends every Sunday on the [[court|8]] near our school. My mother prefers quieter things: she [[does a bit of|3]] yoga at home and [[goes|2]] walking in the park to [[keep fit|4]]. My younger brother wants to be a professional [[athlete|7]], so he trains at the stadium and [[works out|5]] in the gym almost every day. As for me, I’m not very sporty. I swim, but only [[for fun|6]], and my favourite thing is when we all [[go camping|9]] in the mountains in summer."},
+speak:{label:"IELTS Part 1 / CEFR Part 1.1",q:"What do you like doing in your free time? Do you do any sport?",
+sample:"In my free time I usually meet friends or read, but I also try to stay active. I [[go|2]] swimming once a week, and I [[do a bit of|3]] running in the park when the weather is nice. I’m not a serious [[athlete|7]] – I do it mainly [[for fun|6]] and to [[keep fit|4]], because I sit at a desk all day. In summer, my friends and I often [[go camping|9]] near Chimgan. That’s probably my favourite [[leisure activity|0]].",
+starters:["In my free time, I usually…","I’m not really into…, but I do enjoy…","I do it mainly to…","When I was younger, I used to…"],
+more:["CEFR Part 1.1: Which sports are popular in your country?","IELTS Part 1: Did you play any sports when you were a child?","IELTS Part 3: Should schools spend more time on sport?"]},
+mistakes:[["I play swimming.","I go swimming."],["I make sport every day.","I do sport every day."],["I go to fitness.","I go to the gym."]],
+quiz:[["On Sundays I ___ tennis with my cousin.",["play","go","do"],0],["We ___ jogging in the park every morning.",["play","go","make"],1],["I’m not a professional. I play just for ___.",["fit","leisure","fun"],2]]},
+
+{n:50,title:"Sightseeing holidays",topic:"Travel and places you have visited",cefr:"CEFR Part 2",ielts:"IELTS Part 2",time:120,
+words:[
+{w:"go sightseeing / see the sights",p:"phrase",m:"visit famous places",e:"We went sightseeing all day in Bukhara."},
+{w:"have a look round",p:"phrase",m:"visit a place casually, often on foot",e:"Let’s have a look round the old town."},
+{w:"explore",p:"verb",m:"go around a new place to see what is there",e:"I love exploring small streets."},
+{w:"get lost",p:"phrase",m:"not know where you are or how to get back",e:"We got lost in the old market."},
+{w:"souvenir",p:"noun",m:"something you buy to remember a place or holiday",e:"I bought a ceramic plate as a souvenir."},
+{w:"magnificent",p:"adj",m:"very beautiful or impressive",e:"The Registan is magnificent at night."},
+{w:"packed (with)",p:"adj",m:"very crowded",e:"The museum was packed with tourists."},
+{w:"historic monuments",p:"noun",m:"important places built a long time ago",e:"Khiva is full of historic monuments."},
+{w:"the main attraction",p:"noun",m:"the thing that brings most visitors to a place",e:"The main attraction is the old fortress."},
+{w:"worth visiting / worth a visit",p:"phrase",m:"a good idea to visit",e:"Samarkand is definitely worth visiting."}],
+reading:{title:"Three days in Samarkand",text:"Last spring my friends and I spent three days in Samarkand. On the first day we [[went sightseeing|0]] in the centre. The Registan was the [[main attraction|8]] for us, and it was absolutely [[magnificent|5]], although it was [[packed with|6]] tourists by midday. On the second day we decided to [[explore|2]] the old streets on foot. We [[had a look round|1]] the Siyob Bazaar, tasted fresh bread and dried fruit, and of course we [[got lost|3]] twice! There are so many [[historic monuments|7]] that you can’t see them all in a short trip. I bought a small painted bowl as a [[souvenir|4]]. If you visit Uzbekistan, Samarkand is definitely [[worth visiting|9]]."},
+speak:{label:"IELTS Part 2 / CEFR Part 2",q:"Describe a place you visited that you really enjoyed. You should say: where it was, when you went, what you did there, and explain why you enjoyed it.",
+sample:"I’d like to talk about Istanbul, which I visited with my family two years ago. We spent five days there and [[went sightseeing|0]] almost every day. The [[main attraction|8]] for me was the Blue Mosque – it’s [[magnificent|5]] inside, although it was [[packed with|6]] tourists. We also [[had a look round|1]] the Grand Bazaar and bought some [[souvenirs|4]] for our relatives. One evening we [[got lost|3]] in a small neighbourhood, but it turned out to be the best part of the trip, because we found a lovely café. I enjoyed it because the city mixes history and modern life. It’s definitely [[worth visiting|9]].",
+starters:["I’d like to talk about…","The main attraction for me was…","One thing I’ll never forget is…","It’s definitely worth visiting because…"],
+more:["CEFR Part 1.1: Which place in your country would you recommend to tourists?","IELTS Part 1: Do you prefer travelling alone or with other people?","IELTS Part 3: How does tourism change local communities?"]},
+mistakes:[["The city is worth to visit.","The city is worth visiting."],["We lost in the old town.","We got lost in the old town."],["We made sightseeing.","We went sightseeing."]],
+quiz:[["We didn’t know where we were. We got ___.",["lost","packed","explored"],0],["Bukhara is definitely worth ___.",["to visit","visiting","visit"],1],["I bought a small plate as a ___.",["monument","attraction","souvenir"],2]]},
+
+{n:55,title:"Email and the Internet",topic:"Technology, the Internet and social media",cefr:"CEFR Part 1.1, Part 3",ielts:"IELTS Part 1, Part 3",time:120,
+words:[
+{w:"go online",p:"phrase",m:"start using the Internet",e:"I go online as soon as I wake up."},
+{w:"check (your messages)",p:"verb",m:"look to see if you have new messages",e:"I check my messages every hour."},
+{w:"reply to",p:"verb",m:"answer a message",e:"Please reply to my email by Friday."},
+{w:"browse",p:"verb",m:"look at websites",e:"I browse online shops but rarely buy anything."},
+{w:"search (the Internet) for",p:"verb",m:"look for information online",e:"I searched the Internet for exam tips."},
+{w:"download / upload",p:"verb",m:"copy from the Internet to your device / put a file onto the Internet",e:"Download the worksheet, then upload your homework."},
+{w:"social networking sites / social media",p:"noun",m:"sites and apps where people share things and talk",e:"Teenagers spend hours on social media."},
+{w:"post",p:"verb",m:"put a comment, photo or video online",e:"She posts short videos in English every day."},
+{w:"surf the web",p:"phrase",m:"look at lots of websites, often without a clear aim",e:"I can surf the web for hours."},
+{w:"have access to",p:"phrase",m:"be able to use",e:"Not every village has access to fast Internet."}],
+reading:{title:"How I study online",text:"These days most of my learning happens on my phone. Every morning I [[go online|0]] and [[check|1]] my Telegram channel for new tasks from my teacher. I [[reply to|2]] her messages, then I [[download|5]] the worksheet and [[upload|5]] my homework in the evening. When I don’t know a word, I [[search the Internet for|4]] examples instead of only looking at a translation. I also follow a few English teachers on [[social media|6]] and sometimes [[post|7]] short speaking videos. The danger is that it’s easy to [[browse|3]] or [[surf the web|8]] for an hour without learning anything, so I try to set a time limit. I feel lucky to [[have access to|9]] so many free materials."},
+speak:{label:"CEFR Part 3 / IELTS Part 3",q:"The Internet has made young people less sociable. Talk about both sides of this statement, then give your opinion.",
+sample:"On the one hand, some people argue that teenagers spend too much time on [[social media|6]] and [[surfing the web|8]], so they meet friends less often in real life. They [[check|1]] their phones constantly, even during dinner. On the other hand, the Internet can actually help people connect. Young people can [[go online|0]] and chat with friends abroad, join groups with the same interests, and [[post|7]] their ideas for others to see. They also [[have access to|9]] online courses with classmates from different countries. In my opinion, the Internet itself is not the problem; it depends on how we use it.",
+starters:["On the one hand, some people argue that…","On the other hand, …","For example, …","In my opinion, it depends on…"],
+more:["IELTS Part 1: How often do you use the Internet?","CEFR Part 1.1: Which apps do you use most, and why?","IELTS Part 3: Should children have limited screen time?"]},
+mistakes:[["Please reply me soon.","Please reply to me soon."],["I searched information about it.","I searched for information about it."],["I found it in Internet.","I found it on the Internet."]],
+quiz:[["I ___ the file, and now it’s on my laptop.",["downloaded","uploaded","posted"],0],["Sorry, I forgot to ___ your message.",["reply","reply to","answer to"],1],["Many villages still don’t ___ fast Internet.",["go online","browse","have access to"],2]]},
+
+{n:58,title:"Climate change",topic:"The environment and global problems",cefr:"CEFR Part 3",ielts:"IELTS Part 3",time:120,
+words:[
+{w:"climate change / global warming",p:"noun",m:"the rise in the Earth’s temperature and the changes in weather it causes",e:"Global warming is making summers hotter."},
+{w:"the environment",p:"noun",m:"the air, land and water around us",e:"We must protect the environment."},
+{w:"fossil fuels",p:"noun",m:"oil, gas and coal",e:"Most electricity still comes from fossil fuels."},
+{w:"effect (on)",p:"noun",m:"a result or change caused by something",e:"Pollution has a terrible effect on our health."},
+{w:"drought",p:"noun",m:"a long time without rain",e:"Farmers suffer during a drought."},
+{w:"flood",p:"noun",m:"water covering land that is usually dry",e:"Heavy rain caused floods in the valley."},
+{w:"reduce",p:"verb",m:"make something less",e:"We need to reduce plastic waste."},
+{w:"take action",p:"phrase",m:"do something to solve a problem",e:"Governments must take action now."},
+{w:"recycle",p:"verb",m:"use things like paper, glass or plastic again",e:"Our school recycles paper and bottles."},
+{w:"save energy / waste",p:"verb",m:"use less gas and electricity / use something badly",e:"Switch off the lights to save energy. Don’t waste water."}],
+reading:{title:"The sea that disappeared",text:"For people in Uzbekistan, [[the environment|1]] is not an abstract topic. The Aral Sea was once one of the largest lakes in the world, but it shrank dramatically after the water from its rivers was used for cotton fields. The [[effects|3]] were serious: fishing towns lost their jobs, dust storms became common, and local summers became hotter and drier. Today, [[climate change|0]] adds new risks, such as [[droughts|4]] in some years and sudden [[floods|5]] after heavy rain in others. Because the country still uses a lot of [[fossil fuels|2]], many young people believe we must [[take action|7]]. Some schools now [[recycle|8]] paper and plastic, families try to [[save energy|9]], and new solar parks are being built to [[reduce|6]] pollution."},
+speak:{label:"CEFR Part 3 / IELTS Part 3",q:"Protecting the environment is the government’s job, not the job of ordinary people. Talk about both sides of this statement, then give your opinion.",
+sample:"Some people think only governments can solve [[climate change|0]]. They control energy policy, so they can [[reduce|6]] our use of [[fossil fuels|2]] and invest in solar and wind power. Laws also have a much bigger [[effect|3]] than one person’s actions. However, others argue that ordinary people must [[take action|7]] too. We can [[recycle|8]], [[save energy|9]] at home and stop [[wasting|9]] water, which matters a lot in a dry region like ours. Personally, I believe both are necessary: governments make the rules, but people create the habits.",
+starters:["Some people believe that…","However, others argue that…","A good example of this is…","Personally, I believe that both…"],
+more:["CEFR Part 1.1: What do people in your city do to protect the environment?","IELTS Part 1: Do you recycle at home?","IELTS Part 3: Will electric cars solve the problem of pollution?"]},
+mistakes:[["Pollution affects on our health.","Pollution affects our health. / Pollution has an effect on our health."],["We must protect the nature.","We must protect nature."],["Governments must make action.","Governments must take action."]],
+quiz:[["It hasn’t rained for months. There’s a terrible ___.",["drought","flood","effect"],0],["We should ___ bottles instead of throwing them away.",["waste","recycle","reduce"],1],["Oil, gas and coal are ___.",["the environment","renewable energy","fossil fuels"],2]]},
+
+{n:67,title:"Opinions, agreeing and disagreeing",topic:"Discussion and debate (useful in every topic)",cefr:"CEFR Part 3",ielts:"IELTS Part 3",time:120,
+words:[
+{w:"What do you think of / about…?",p:"question",m:"ask for an opinion: of + a specific thing or person, about + a general topic",e:"What do you think about online learning?"},
+{w:"Personally, I think…",p:"phrase",m:"give your own opinion (very natural in speaking)",e:"Personally, I think exams are useful."},
+{w:"In my opinion, …",p:"phrase",m:"give your opinion (a little more formal)",e:"In my opinion, school uniforms are a good idea."},
+{w:"My view is that…",p:"phrase",m:"state your opinion clearly",e:"My view is that cities need more parks."},
+{w:"According to…",p:"phrase",m:"report what another person or source says",e:"According to my teacher, reading is the key."},
+{w:"I totally agree.",p:"phrase",m:"agree 100%",e:"I totally agree with you."},
+{w:"I agree to a certain extent.",p:"phrase",m:"agree, but not completely",e:"I agree to a certain extent, but it depends on the person."},
+{w:"I see what you mean, but…",p:"phrase",m:"show you understand, then disagree politely",e:"I see what you mean, but it’s too expensive."},
+{w:"That’s a good point, but…",p:"phrase",m:"accept an idea, then add a different one",e:"That’s a good point, but what about older people?"},
+{w:"I don’t agree at all.",p:"phrase",m:"disagree completely",e:"I’m sorry, but I don’t agree at all."}],
+reading:{dialog:true,title:"A classroom discussion",text:"Teacher: [[What do you think about|0]] homework at weekends?\nKamol: [[Personally, I think|1]] it’s unfair. Students need time to rest.\nAziza: [[I see what you mean, but|7]] a little practice keeps the language fresh. [[According to|4]] my brother, he improved fastest when he studied a bit every day.\nKamol: [[That’s a good point, but|8]] not every student has free time at weekends.\nTeacher: So, Aziza, should we have more homework?\nAziza: No, [[I don’t agree at all|9]] with more homework – just short tasks. [[My view is that|3]] quality is more important than quantity.\nKamol: OK, [[I agree to a certain extent|6]]. Short tasks are fine.\nTeacher: [[In my opinion|2]], you’re both right. Let’s try fifteen minutes a day.\nAziza: [[I totally agree|5]]!"},
+speak:{label:"CEFR Part 3 / IELTS Part 3",q:"Some people say students should not be allowed to use phones at school. Talk about both sides, then give your opinion.",
+sample:"[[Personally, I think|1]] this question is more complicated than it seems. [[According to|4]] many teachers, phones distract students and make it harder to concentrate, and [[I agree to a certain extent|6]]. Supporters of a total ban also say that social media causes problems between students, and [[that’s a good point|8]]. However, phones can be useful learning tools, for example for dictionaries or quick research. [[My view is that|3]] schools should teach students how to use phones wisely instead of banning them completely.",
+starters:["Personally, I think…","I agree to a certain extent, but…","Some people argue that…, but my view is that…","To sum up, I believe…"],
+more:["CEFR Part 3: Learning a foreign language should start in primary school. (Give arguments for and against.)","IELTS Part 3: Do people today trust online information too much?","Practice: give one argument for, one against, then your opinion – in two minutes."]},
+mistakes:[["I’m agree with you.","I agree with you."],["Are you agree?","Do you agree?"],["On my opinion, …","In my opinion, …"],["I think it’s not a good idea.","I don’t think it’s a good idea."]],
+quiz:[["I ___ agree with you – 100%!",["totally","partly","at all"],0],["___ my teacher, reading every day is the best way to learn.",["Personally","According to","In my opinion"],1],["I ___ with your idea.",["am agree","am agreeing","agree"],2]]}
+];
+
+var MARK=/\[\[([^|\]]+)\|(\d+)\]\]/g;
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function marked(t){return esc(t).replace(MARK,'<button type="button" class="hl" data-k="$2">$1</button>')}
+function plain(t){return t.replace(MARK,"$1")}
+
+var store={get:function(){try{return JSON.parse(localStorage.getItem("vfs-done")||"[]")}catch(e){return[]}},
+set:function(a){try{localStorage.setItem("vfs-done",JSON.stringify(a))}catch(e){}}};
+var done=store.get();
+
+
+var list=document.getElementById("ulist"),box=document.getElementById("unit"),count=document.getElementById("count");
+var current=0,timer=null;
+
+function drawList(){
+  list.innerHTML=UNITS.map(function(u,i){
+    return '<li><button type="button" data-i="'+i+'"'+(i===current?' aria-current="true"':'')+'><span class="num">'+u.n+'</span><span class="t">'+u.title+'<span class="s">'+u.topic+'</span></span><span class="done" aria-label="'+(done.indexOf(u.n)>-1?'done':'')+'">'+(done.indexOf(u.n)>-1?'✓':'')+'</span></button></li>';
+  }).join("");
+  count.textContent=done.length+" of 10 units done. Tap a unit to open it.";
+}
+
+function drawUnit(i){
+  current=i;var u=UNITS[i];
+  if(timer){clearInterval(timer);timer=null}
+  var h='<div class="unit-head"><p class="no">Unit '+u.n+'</p><h2 id="unit-title">'+u.title+'</h2><div class="tags"><span class="tag">'+u.cefr+'</span><span class="tag">'+u.ielts+'</span></div><p class="topic">Speaking topic: '+u.topic+'</p></div>';
+
+  h+='<section class="step"><div class="step-h"><span class="c">1</span><h3>Word and meaning</h3></div>';
+  h+='<div class="row-tools"><button type="button" class="btn" id="hide">Test me: hide meanings</button></div>';
+  h+='<ul class="words" id="words">'+u.words.map(function(w){
+    return '<li><div class="w-top"><span class="w">'+esc(w.w)+'</span><span class="pos">'+w.p+'</span>'+'</div><p class="m">'+esc(w.m)+'</p><p class="e">'+esc(w.e)+'</p></li>';
+  }).join("")+'</ul></section>';
+
+  var r=u.reading;
+  var body=r.dialog?r.text.split("\n").map(function(l){var k=l.indexOf(":");return '<p><b>'+esc(l.slice(0,k))+':</b>'+marked(l.slice(k+1))+'</p>'}).join(""):'<p>'+marked(r.text)+'</p>';
+  h+='<section class="step"><div class="step-h"><span class="c">2</span><h3>Reading in context</h3></div>';
+  h+='<div class="sheet'+(r.dialog?' dialog':'')+'" data-gloss><h4>'+r.title+'</h4>'+body+'<p class="gloss" aria-live="polite">Tap a highlighted word to see its meaning.</p></div></section>';
+
+  var s=u.speak;
+  h+='<section class="step"><div class="step-h"><span class="c">3</span><h3>Usage in speaking</h3></div>';
+  h+='<div class="q"><p class="lab">'+s.label+'</p><p class="qt">'+esc(s.q)+'</p></div>';
+  h+='<div class="model"><div class="sheet" data-gloss><h4>Model answer</h4><p>'+marked(s.sample)+'</p><p class="gloss" aria-live="polite">Tap a highlighted word to see its meaning.</p></div></div>';
+  h+='<p class="sub">Sentence starters</p><ul class="starters">'+s.starters.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>';
+  h+='<p class="sub">Your turn</p><p style="margin:0">Answer the same question out loud with your own ideas. Try to use at least five words from this unit.</p>';
+  h+='<div class="turn"><button type="button" class="btn solid" id="tbtn">Start '+(u.time>=60?(u.time/60)+'-minute':u.time+'-second')+' timer</button><span class="clock" id="clock" aria-live="polite"></span></div>';
+  h+='<p class="sub">More questions to practise</p><ul class="more">'+s.more.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></section>';
+
+  h+='<section class="step"><div class="step-h"><span class="c">!</span><h3>Watch out: common mistakes</h3></div><ul class="mist">'+u.mistakes.map(function(m){return '<li><span class="bad">'+esc(m[0])+'</span><span class="good">'+esc(m[1])+'</span></li>'}).join("")+'</ul></section>';
+
+  h+='<section class="step"><div class="step-h"><span class="c">?</span><h3>Quick check</h3></div><ol class="quiz">'+u.quiz.map(function(q,qi){
+    return '<li data-q="'+qi+'"><p class="s">'+esc(q[0])+'</p><div class="opts">'+q[1].map(function(o,oi){return '<button type="button" class="opt" data-o="'+oi+'">'+esc(o)+'</button>'}).join("")+'</div><p class="fb" aria-live="polite"></p></li>';
+  }).join("")+'</ol><p class="score" id="score"></p></section>';
+
+  var isDone=done.indexOf(u.n)>-1;
+  h+='<div class="unit-end"><button type="button" class="btn solid" id="mark">'+(isDone?'✓ Unit done':'Mark unit as done')+'</button>'+(i<UNITS.length-1?'<button type="button" class="btn" id="next">Next: Unit '+UNITS[i+1].n+'</button>':'')+'<a href="#contents">Back to all units</a></div>';
+
+  box.innerHTML=h;
+  drawList();
+  wire(u);
+}
+
+function wire(u){
+  var hide=document.getElementById("hide"),words=document.getElementById("words");
+  hide.onclick=function(){var on=words.classList.toggle("hide-m");hide.textContent=on?"Show meanings":"Test me: hide meanings";words.querySelectorAll(".m").forEach(function(m){m.classList.remove("peek")})};
+  words.addEventListener("click",function(e){
+    var m=e.target.closest(".m");if(m&&words.classList.contains("hide-m"))m.classList.toggle("peek");
+  });
+  box.querySelectorAll("[data-gloss]").forEach(function(sh){
+    sh.addEventListener("click",function(e){
+      var b=e.target.closest(".hl");if(!b)return;var w=u.words[+b.getAttribute("data-k")];
+      sh.querySelector(".gloss").innerHTML='<strong>'+esc(w.w)+'</strong> – '+esc(w.m);
+    });
+  });
+
+  var tb=document.getElementById("tbtn"),clock=document.getElementById("clock");
+  tb.onclick=function(){
+    if(timer){clearInterval(timer);timer=null;tb.textContent="Start again";clock.textContent="";return}
+    var left=u.time;tb.textContent="Stop";
+    var show=function(){clock.textContent=Math.floor(left/60)+":"+("0"+(left%60)).slice(-2)};show();
+    timer=setInterval(function(){left--;if(left<=0){clearInterval(timer);timer=null;clock.textContent="Time’s up!";tb.textContent="Start again";return}show()},1000);
+  };
+
+  var right=0,answered=0;
+  box.querySelectorAll(".quiz li").forEach(function(li){
+    var q=u.quiz[+li.getAttribute("data-q")],fb=li.querySelector(".fb"),locked=false;
+    li.addEventListener("click",function(e){
+      var b=e.target.closest(".opt");if(!b||locked)return;
+      var o=+b.getAttribute("data-o");
+      if(o===q[2]){b.classList.add("right");fb.textContent="Correct!";locked=true;answered++;if(!li.dataset.miss)right++;
+        if(answered===u.quiz.length)document.getElementById("score").textContent="You got "+right+" of "+u.quiz.length+" right first time."+(right===u.quiz.length?" Excellent!":" Try the unit again tomorrow.");}
+      else{b.classList.add("wrong");li.dataset.miss="1";fb.textContent="Not quite – try again.";}
+    });
+  });
+
+  document.getElementById("mark").onclick=function(){
+    var k=done.indexOf(u.n);if(k>-1)done.splice(k,1);else done.push(u.n);store.set(done);
+    this.textContent=done.indexOf(u.n)>-1?"✓ Unit done":"Mark unit as done";drawList();
+  };
+  var nx=document.getElementById("next");if(nx)nx.onclick=function(){open(current+1)};
+}
+
+function open(i){drawUnit(i);try{history.replaceState(null,"","#unit-"+UNITS[i].n)}catch(e){}document.getElementById("unit").scrollIntoView()}
+
+list.addEventListener("click",function(e){var b=e.target.closest("button");if(b)open(+b.getAttribute("data-i"))});
+
+(function init(){
+  var m=(location.hash||"").match(/unit-(\d+)/),start=0;
+  if(m){UNITS.forEach(function(u,i){if(u.n===+m[1])start=i})}
+  drawUnit(start);
+  if(m)setTimeout(function(){document.getElementById("unit").scrollIntoView()},50);
+})();
+</script>
+</body>
+</html>
